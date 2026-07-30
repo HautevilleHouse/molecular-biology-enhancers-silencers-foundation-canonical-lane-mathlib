@@ -1,0 +1,29 @@
+import canonicalLaneMathlib.AdmissibleClass
+import MolecularBiologyEnhancersSilencersFoundationCanonicalLaneLean.EnhancerBindingSites
+import MolecularBiologyEnhancersSilencersFoundationCanonicalLaneLean.SilencerRepression
+import MolecularBiologyEnhancersSilencersFoundationCanonicalLaneLean.ChromatinAccessibility
+import MolecularBiologyEnhancersSilencersFoundationCanonicalLaneLean.TranscriptionalRegulation
+import MolecularBiologyEnhancersSilencersFoundationCanonicalLaneLean.EpigeneticModifications
+
+namespace HautevilleHouse
+namespace MolecularBiologyEnhancersSilencersFoundationCanonicalLaneLean
+
+structure MolecularBiologyAdmittedObject where
+  enhancer : EnhancerBindingSite
+  silencer : SilencerElement
+  chromatin : ChromatinAccessibilityState
+  regulation : TranscriptionalRegulationState
+  epigenetic : EpigeneticModificationState
+  allValid : Prop
+
+structure MolecularBiologyAdmissibleClass where
+  object : MolecularBiologyAdmittedObject
+  endpointSatisfied : Prop
+  remainderRecorded : Prop
+  gateWitness : endpointSatisfied ∨ remainderRecorded
+
+def mBAdmittedClosure (A : MolecularBiologyAdmissibleClass) : Prop :=
+  A.object.allValid ∧ (A.endpointSatisfied ∨ A.remainderRecorded)
+
+end MolecularBiologyEnhancersSilencersFoundationCanonicalLaneLean
+end HautevilleHouse
